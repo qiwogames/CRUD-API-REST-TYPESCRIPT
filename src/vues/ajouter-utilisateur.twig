@@ -1,0 +1,17 @@
+{% include "base.twig" %}
+
+{%block body%}
+    <div class="container">
+        <h3>AJOUTER UN UTILISATEUR</h3>
+        <form method="post">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@eamil.fr" required>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Mot2P@sse" required>
+            <!-- Button -->
+            <button type="submit">Ajouter</button>
+            <a href="/utilisateurs" class="outline" role="button">Retour</a>
+        </form>
+    </div>
+{%endblock%}

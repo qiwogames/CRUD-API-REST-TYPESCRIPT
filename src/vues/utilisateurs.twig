@@ -1,0 +1,21 @@
+{% include "base.twig" %}
+
+{%block body%}
+    <div class="container">
+        <h3>LISTE DES UTILISATEURS</h3>
+          <a href="/accueil" class="outline contrast" role="button">RETOUR</a>
+        <div class="grid" id="utilisateurs-conteneur">
+        {%for user in utilisateurs%}
+            <article class="carte-utilisateur">
+                <p>ID : <b class="text-orange">{{user.id}}</b></p>
+                <p>EMAIL : <b class="text-orange">{{user.email}}</b></p>
+                <p>MOT DE PASSE : <b class="text-orange">{{user.password}}</b></p>
+                <p><a role="button" class="outline" href="/utilisateurs/{{user.id}}">Détails</a></p>
+                <p><a role="button" class="btn-red" href="/supprimer-utilisateur/{{user.id}}">SUPPRIMER</a></p>
+                <p><a role="button" class="btn-puple" href="/mette-a-jour-utilisateur/{{user.id}}">METTRE A JOUR</a></p>
+            </article>
+            
+        {% endfor %}
+        </div>
+    </div>
+{%endblock%}

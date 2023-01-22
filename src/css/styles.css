@@ -1,0 +1,30 @@
+html, body{
+    background-color: rgb(19, 46, 70);
+    color: aliceblue;
+}
+
+.text-orange{
+    color: rgb(226, 158, 11)!important;
+}
+
+
+
+#utilisateurs-conteneur{
+    display: flex;
+    flex-wrap: wrap;
+}
+.carte-utilisateur{
+    width: 30%;
+}
+
+.btn-red{
+    background-color: brown;
+    color: white;
+    border: none;
+}
+
+.btn-puple{
+    background-color: rgb(53, 34, 56);
+    color: white;
+    border: none;
+}

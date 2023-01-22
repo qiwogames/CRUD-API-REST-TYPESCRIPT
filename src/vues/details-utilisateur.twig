@@ -1,0 +1,16 @@
+{% include "base.twig" %}
+
+{%block body%}
+    <div class="container">
+        <h3>LISTE DES UTILISATEURS</h3>
+            <article>
+                <p>ID : <b class="text-orange">{{unUtilisateur.id}}</b></p>
+                <p>EMAIL : <b class="text-orange">{{unUtilisateur.email}}</b></p>
+                <p>MOT DE PASSE : <b class="text-orange">{{unUtilisateur.password}}</b></p>
+            </article>
+            <a href="/supprimer-utilisateur/{{unUtilisateur.id}}" class="btn-red" role="button">SUPPRIMER</a>
+          
+            <a role="button" class="btn-puple" href="/mette-a-jour-utilisateur/{{unUtilisateur.id}}">METTRE A JOUR</a>
+        <a href="/utilisateurs" class="outline contrast" role="button">RETOUR</a>
+    </div>
+{%endblock%}
